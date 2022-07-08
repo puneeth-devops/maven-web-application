@@ -1,3 +1,4 @@
+@Library("mysharedlib") _
 node("amazon-node"){
     
 echo "Node Name is ${env.NODE_NAME}"
@@ -13,7 +14,7 @@ timestamps {
 try{
 stage('Checkout code')
 {
-    notifyBuild('STARTED')
+    sendSlackNotifications('STARTED')
     git branch: 'development', credentialsId: '67f47e78-6d7f-4815-b78e-28d0b96c3eec', url: 'https://github.com/puneeth-devops/maven-web-application.git'
 }
 stage('Build')
@@ -41,10 +42,11 @@ stage('Deploy to Tomcat')
     throw e
   } finally {
     // Success or failure, always send notifications
-    notifyBuild(currentBuild.result)
+    sendSlackNotifications(currentBuild.result)
   }
 }
 
+/*
 def notifyBuild(String buildStatus = 'STARTED') {
   // build status of null means successful
   buildStatus =  buildStatus ?: 'SUCCESSFUL'
@@ -70,3 +72,4 @@ def notifyBuild(String buildStatus = 'STARTED') {
   // Send notifications
   slackSend (color: colorCode, message: summary)
 }
+*/
