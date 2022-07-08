@@ -1,3 +1,4 @@
+/*
 @Library("mysharedlib") _
 node("amazon-node"){
     
@@ -45,6 +46,7 @@ stage('Deploy to Tomcat')
     sendSlackNotifications(currentBuild.result)
   }
 }
+*/
 
 /*
 def notifyBuild(String buildStatus = 'STARTED') {
