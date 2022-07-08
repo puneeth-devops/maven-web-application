@@ -1,4 +1,4 @@
-node{
+node("amazon-node"){
     
 echo "Node Name is ${env.NODE_NAME}"
 echo "Job Name is ${env.JOB_NAME}"
