@@ -98,14 +98,14 @@
 	
 	    <repository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://43.204.215.131:8081/naikpuneeth/repository/walmart-release-repo/</url>
+	      <name>Puneeth Naik Release Repo</name>
+	      <url>http://52.66.204.252:8081/puneethnaik/repository/maven-web-release-repo/</url>
 		</repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://43.204.215.131:8081/naikpuneeth/repository/walmart-snapshot-repo/</url>
+	      <name>Puneeth Naik Snapshot Repo </name>
+	      <url>http://52.66.204.252:8081/puneethnaik/repository/maven-web-snapshot-repo/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
